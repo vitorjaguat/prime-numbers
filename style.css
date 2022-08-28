@@ -1,0 +1,59 @@
+* {
+    /* display: inline-block; */
+    font-family: Futura;
+    background-color: #006BAE;
+    color: aliceblue
+}
+
+body {
+    /* display: flex;
+    justify-content: center;
+    align-items: center; */
+}
+
+
+
+.text,
+h1 {
+    text-align: center;
+    margin: 2rem;
+}
+
+h1 {
+    font-size: 3rem;
+}
+
+.text {
+    font-size: 1.5rem;
+}
+
+button {
+    margin-top: 10%;
+    height: 4rem;
+    width: 7rem;
+    font-size: 1.7rem;
+    background-color: #F7941E;
+}
+
+.button {
+    display: flex;
+    justify-content: center;
+}
+
+.lot-container {
+    display: flex;
+    justify-content: space-around;
+    font-size: 2.2rem;
+    padding: 0 4rem 0 4rem;
+    margin-top: 10%;
+}
+
+.hidden {
+    display: none;
+}
+
+.num {
+    border: 0.05px solid rgb(95, 95, 95);
+    background-color: #F7941E;
+    padding: 0.5rem;
+}

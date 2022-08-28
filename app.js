@@ -93,17 +93,17 @@ const genNumHelper = function () {
     }
     return game
 }
-const generateLot = function () {
-    const arr = [];
-    const num1 = genNumHelper();
-    const num2 = genNumHelper();
-    const num3 = genNumHelper();
-    const num4 = genNumHelper();
-    const num5 = genNumHelper();
-    const num6 = genNumHelper();
-    arr.push(num1, num2, num3, num4, num5, num6)
-    primos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59];
-}
+// const generateLot = function () {
+//     const arr = [];
+//     const num1 = genNumHelper();
+//     const num2 = genNumHelper();
+//     const num3 = genNumHelper();
+//     const num4 = genNumHelper();
+//     const num5 = genNumHelper();
+//     const num6 = genNumHelper();
+//     arr.push(num1, num2, num3, num4, num5, num6)
+//     primos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59];
+// }
 
 console.log(genNumHelper())
 console.log(genNumHelper())
@@ -117,7 +117,7 @@ console.log(genNumHelper())
 console.log(genNumHelper())
 console.log(genNumHelper())
 console.log(genNumHelper())
-console.log(generateLot());
+// console.log(generateLot());
 
 const random = Math.trunc(Math.random() * (8) + 1)
 console.log(random)
@@ -125,3 +125,24 @@ console.log(random)
 console.log(random)
 console.log(random)
 console.log(random)
+
+
+
+//VIEW：
+const btn = document.querySelector('button');
+const numContainers = Array.from(document.querySelectorAll('.num'));
+const lotContainer = document.querySelector('.lot-container');
+console.log(numContainers)
+console.log(btn)
+
+btn.addEventListener('click', function () {
+    const nums = genNumHelper();
+    btn.classList.add('hidden');
+    // setTimeout(() => {
+
+    lotContainer.classList.remove('hidden');
+    nums.forEach((num, i) => {
+        numContainers[i].innerText = num;
+    })
+    // }, 4000)
+})
