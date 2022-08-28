@@ -84,7 +84,7 @@ let primos = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59];
 
 const genNumHelper = function () {
     const game = []
-    let primosInt = [2, 3, 5, 7, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59];
+    let primosInt = [02, 03, 05, 07, 11, 13, 17, 19, 23, 29, 31, 37, 41, 43, 47, 53, 59];
     for (i = 1; i <= 6; i++) {
         const randomP = Math.trunc(Math.random() * (primosInt.length))
         const num = primosInt[randomP];
@@ -136,7 +136,8 @@ console.log(numContainers)
 console.log(btn)
 
 btn.addEventListener('click', function () {
-    const nums = genNumHelper();
+    let nums = genNumHelper();
+    nums = nums.map(num => num.toString().padStart(2, '0')).sort();
     btn.classList.add('hidden');
     // setTimeout(() => {
 
