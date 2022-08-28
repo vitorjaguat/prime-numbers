@@ -132,6 +132,7 @@ console.log(random)
 const btn = document.querySelector('button');
 const numContainers = Array.from(document.querySelectorAll('.num'));
 const lotContainer = document.querySelector('.lot-container');
+const spinner = document.querySelector('.spinner');
 console.log(numContainers)
 console.log(btn)
 
@@ -139,11 +140,13 @@ btn.addEventListener('click', function () {
     let nums = genNumHelper();
     nums = nums.map(num => num.toString().padStart(2, '0')).sort();
     btn.classList.add('hidden');
-    // setTimeout(() => {
+    setTimeout(() => spinner.classList.remove('hidden'), 500)
 
-    lotContainer.classList.remove('hidden');
-    nums.forEach((num, i) => {
-        numContainers[i].innerText = num;
-    })
-    // }, 4000)
+    setTimeout(() => {
+        spinner.classList.add('hidden');
+        lotContainer.classList.remove('hidden');
+        nums.forEach((num, i) => {
+            numContainers[i].innerText = num;
+        })
+    }, 4000)
 })
