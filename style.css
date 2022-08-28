@@ -1,11 +1,13 @@
 * {
     /* display: inline-block; */
     font-family: Futura;
-    background-color: #006BAE;
+    /* background-color: #006BAE; */
+
     color: aliceblue
 }
 
 body {
+    background-image: linear-gradient(#006BAE, #0090ea);
     /* display: flex;
     justify-content: center;
     align-items: center; */
