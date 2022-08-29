@@ -101,3 +101,10 @@ button {
         transform: rotate(360deg);
     }
 } */
+
+@media (max-width: 700px) {
+    .num {
+        margin: 0 0.3rem 0 0.3rem;
+        font-size: 1.4rem;
+    }
+}
