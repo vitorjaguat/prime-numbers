@@ -36,6 +36,7 @@ button {
 .button {
     display: flex;
     justify-content: center;
+    margin-top: 2rem;
 }
 
 .lot-container {
