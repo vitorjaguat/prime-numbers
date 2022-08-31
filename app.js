@@ -133,20 +133,32 @@ const btn = document.querySelector('button');
 const numContainers = Array.from(document.querySelectorAll('.num'));
 const lotContainer = document.querySelector('.lot-container');
 const spinner = document.querySelector('.spinner');
-console.log(numContainers)
-console.log(btn)
+const btnNewgame = document.querySelector('.btn-newgame');
 
-btn.addEventListener('click', function () {
+const newgame = function () {
     let nums = genNumHelper();
     nums = nums.map(num => num.toString().padStart(2, '0')).sort();
     btn.classList.add('hidden');
-    setTimeout(() => spinner.classList.remove('hidden'), 500)
+    setTimeout(() => {
+        spinner.classList.remove('hidden');
+        btnNewgame.classList.add('hidden');
+    }, 500)
 
     setTimeout(() => {
         spinner.classList.add('hidden');
         lotContainer.classList.remove('hidden');
+        btnNewgame.classList.remove('hidden');
         nums.forEach((num, i) => {
             numContainers[i].innerText = num;
         })
     }, 4000)
+}
+
+btn.addEventListener('click', function () {
+    newgame();
+})
+
+btnNewgame.addEventListener('click', function () {
+    lotContainer.classList.add('hidden');
+    newgame();
 })

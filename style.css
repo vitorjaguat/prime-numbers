@@ -14,16 +14,6 @@ body {
     height: 100vh;
 }
 
-.main {
-    display: flex;
-    flex-direction: column;
-    justify-content: space-around;
-
-    height: 100vh;
-}
-
-
-
 .text,
 h1 {
     text-align: center;
@@ -85,6 +75,24 @@ button {
 
 }
 
+.btn-newgame {
+    margin-top: 4rem;
+    width: 6rem;
+    height: auto;
+    /* translate: 3rem; */
+    font-size: 0.9rem;
+    background-color: #006BAE;
+    text-align: center;
+}
+
+.main {
+    display: flex;
+    height: 100vh;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 /* .spinner {
     margin: 5rem auto;
     text-align: center;
@@ -133,5 +141,9 @@ button {
 
     .spinner {
         font-size: 1rem;
+    }
+
+    .btn-newgame {
+        margin-top: 2rem;
     }
 }
